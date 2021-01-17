@@ -1,0 +1,41 @@
+.login {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    font-size: 32px;
+  }
+  @media (max-width: 1200em) {
+    padding: 60px 50px;
+  }
+  @media (max-width: 768em) {
+    padding: 50px 40px;
+  }
+  @media (max-width: 480em) {
+    padding: 30px 25px;
+  }
+
+  &__button {
+    display: inline-block;
+    background-color: #1DB954;
+    color: #FFFFFF;
+    border-radius: 30px;
+    padding: 17px 35px;
+    margin: 20px 0 70px;
+    min-width: 160px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    &:hover,
+    &:focus {
+      background-color: #1ed760;
+    }
+  }
+}
