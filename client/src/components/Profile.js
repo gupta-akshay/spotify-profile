@@ -4,6 +4,7 @@ import { Router } from '@reach/router';
 import ScrollToTop from './ScrollToTop';
 import Nav from './Nav';
 import User from './User';
+import TopArtists from './TopArtists';
 
 import '../styles/profile.scss';
 
@@ -13,6 +14,7 @@ const Profile = () => (
     <Router primary={false}>
       <ScrollToTop path="/">
         <User path="/" />
+        <TopArtists path="artists" />
       </ScrollToTop>
     </Router>
   </div>
