@@ -90,7 +90,6 @@ if (cluster.isMaster) {
     const scope =
       'user-read-private user-read-email user-read-recently-played user-top-read user-follow-read user-follow-modify playlist-read-private playlist-read-collaborative playlist-modify-public';
 
-    console.log('---REDIRECT_URI---', REDIRECT_URI);
     res.redirect(
       `https://accounts.spotify.com/authorize?${querystring.stringify({
         response_type: 'code',

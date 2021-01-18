@@ -1,0 +1,7 @@
+.profile-wrapper {
+  padding-left: 100px;
+  @media (max-width: 48em) {
+    padding-left: 0;
+    padding-bottom: 50px;
+  }
+}
