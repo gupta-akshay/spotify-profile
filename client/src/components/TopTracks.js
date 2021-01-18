@@ -78,13 +78,13 @@ class TopTracks extends Component {
             </button>
           </div>
         </header>
-        <div className="tracks-container">
+        <ul className="tracks-container">
           {topTracks ? (
             topTracks.items.map((track, i) => <TrackItem track={track} key={i} />)
           ) : (
             <Loader />
           )}
-        </div>
+        </ul>
       </main>
     )
   }
