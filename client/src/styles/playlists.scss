@@ -1,0 +1,123 @@
+.playlists-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  min-height: 100vh;
+  padding: 80px;
+  @media (max-width: 75em) {
+    padding: 60px 50px;
+  }
+  @media (max-width: 48em) {
+    padding: 50px 40px;
+  }
+  @media (max-width: 30em) {
+    padding: 30px 25px;
+  }
+  h2 {
+    @media (max-width: 48em) {
+      text-align: center;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+  }
+
+  .playlists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    width: 100%;
+    margin-top: 50px;
+    @media (max-width: 48em) {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    @media (max-width: 30em) {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .playlist {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      &__cover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        &:hover,
+        &:focus {
+          .playlist__mask {
+            opacity: 1;
+          }
+        }
+
+        &-img {
+          object-fit: cover;
+        }
+        &-placeholder {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          padding-bottom: 100%;
+          background-color: #282828;
+          svg {
+            width: 50px;
+            height: 50px;
+          }
+          &__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+
+      &__mask {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 30px;
+        color: #FFFFFF;
+        opacity: 0;
+        transition: all 0.25s cubic-bezier(0.3, 0, 0.4, 1);
+      }
+
+      &__name {
+        display: inline;
+        border-bottom: 1px solid transparent;
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid #FFFFFF;
+        }
+      }
+
+      &__total {
+        text-transform: uppercase;
+        margin: 5px 0;
+        color: #9B9B9B;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
