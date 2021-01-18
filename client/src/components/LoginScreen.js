@@ -5,7 +5,7 @@ import '../styles/login.scss';
 const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
-    : 'https://spotify-profile.herokuapp.com/login';
+    : 'https://profile-spotify.herokuapp.com/login';
 
 const LoginScreen = () => (
   <main className="login">
