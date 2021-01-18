@@ -46,33 +46,33 @@ class TopArtists extends Component {
           <div className="header__ranges">
             <button
               className="header__ranges-btn"
-              styles={{ color: `${activeRange === 'long' ? '#FFFFFF' : '#9B9B9B'}` }}
+              style={{ color: `${activeRange === 'long' ? '#FFFFFF' : '#9B9B9B'}` }}
               onClick={() => this.setActiveRange('long')}
             >
               <span
-                styles={{ border: `${activeRange === 'long' ? '1px solid #FFFFFF' : '1px solid transparent'}` }}
+                style={{ border: `${activeRange === 'long' ? '1px solid #FFFFFF' : '1px solid transparent'}` }}
               >
                 All Time
               </span>
             </button>
             <button
               className="header__ranges-btn"
-              styles={{ color: `${activeRange === 'medium' ? '#FFFFFF' : '#9B9B9B'}` }}
+              style={{ color: `${activeRange === 'medium' ? '#FFFFFF' : '#9B9B9B'}` }}
               onClick={() => this.setActiveRange('medium')}
             >
               <span
-                styles={{ border: `${activeRange === 'medium' ? '1px solid #FFFFFF' : '1px solid transparent'}` }}
+                style={{ border: `${activeRange === 'medium' ? '1px solid #FFFFFF' : '1px solid transparent'}` }}
               >
                 Last 6 Months
               </span>
             </button>
             <button
               className="header__ranges-btn"
-              styles={{ color: `${activeRange === 'short' ? '#FFFFFF' : '#9B9B9B'}` }}
+              style={{ color: `${activeRange === 'short' ? '#FFFFFF' : '#9B9B9B'}` }}
               onClick={() => this.setActiveRange('short')}
             >
               <span
-                styles={{ border: `${activeRange === 'short' ? '1px solid #FFFFFF' : '1px solid transparent'}` }}
+                style={{ border: `${activeRange === 'short' ? '1px solid #FFFFFF' : '1px solid transparent'}` }}
               >
                 Last 4 Weeks
               </span>

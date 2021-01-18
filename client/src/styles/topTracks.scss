@@ -47,9 +47,14 @@
           font-size: 14px;
         }
         span {
-          padding-bottom: 2px;
           line-height: 1.5;
           white-space: nowrap;
+          padding: 12px 30px;
+          border-radius: 30px;
+          @media (max-width: 48em) {
+            padding: 4px 12px;
+            border-radius: 12px;
+          }
         }
       }
     }
