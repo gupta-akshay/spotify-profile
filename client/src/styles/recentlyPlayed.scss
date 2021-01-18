@@ -1,0 +1,25 @@
+.recently-played {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  min-height: 100vh;
+  padding: 80px;
+  @media (max-width: 75em) {
+    padding: 60px 50px;
+  }
+  @media (max-width: 48em) {
+    padding: 50px 40px;
+  }
+  @media (max-width: 30em) {
+    padding: 30px 25px;
+  }
+  h2 {
+    @media (max-width: 48em) {
+      text-align: center;
+    }
+  }
+
+  &__tracks {
+    margin-top: 50px;
+  }
+}
