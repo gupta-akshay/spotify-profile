@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
-import { Link } from '@reach/router';
-import { getTopArtistsShort, getTopArtistsMedium, getTopArtistsLong } from '../spotify';
+import { getTopTracksShort, getTopTracksMedium, getTopTracksLong } from '../spotify';
 import { catchErrors } from '../utils';
 
-import { IconInfo } from './icons';
 import Loader from './Loader';
+import TrackItem from './TrackItem';
 
-import '../styles/topArtists.scss';
+import '../styles/topTracks.scss';
 
-class TopArtists extends Component {
+class TopTracks extends Component {
   state = {
-    topArtists: null,
+    topTracks: null,
     activeRange: 'long',
-  }
+  };
 
   apiCalls = {
-    long: getTopArtistsLong(),
-    medium: getTopArtistsMedium(),
-    short: getTopArtistsShort(),
+    long: getTopTracksLong(),
+    medium: getTopTracksMedium(),
+    short: getTopTracksShort(),
   };
 
   componentDidMount() {
@@ -25,24 +24,24 @@ class TopArtists extends Component {
   }
 
   async getData() {
-    const { data } = await getTopArtistsLong();
-    this.setState({ topArtists: data });
+    const { data } = await getTopTracksLong();
+    this.setState({ topTracks: data });
   }
 
   async changeRange(range) {
     const { data } = await this.apiCalls[range];
-    this.setState({ topArtists: data, activeRange: range });
+    this.setState({ topTracks: data, activeRange: range });
   }
 
   setActiveRange = range => catchErrors(this.changeRange(range));
 
   render() {
-    const { topArtists, activeRange } = this.state;
+    const { topTracks, activeRange } = this.state;
 
     return (
-      <main className="top-artists-container">
+      <main className="top-tracks-container">
         <header className="header">
-          <h2>Top Artists</h2>
+          <h2>Top Tracks</h2>
           <div className="header__ranges">
             <button
               className="header__ranges-btn"
@@ -79,28 +78,16 @@ class TopArtists extends Component {
             </button>
           </div>
         </header>
-        <div className="artists-container">
-          {topArtists ? (
-            topArtists.items.map(({ id, external_urls, images, name }, i) => (
-              <div className="artist" key={id}>
-                <Link className="artist__artwork" to={`/artist/${id}`}>
-                  {images.length && <img src={images[1].url} alt="Artist" />}
-                  <div className="artist__artwork-mask">
-                    <IconInfo />
-                  </div>
-                </Link>
-                <a className="artist__name" href={external_urls.spotify} target="_blank" rel="noopener noreferrer">
-                  {name}
-                </a>
-              </div>
-            ))
+        <div className="tracks-container">
+          {topTracks ? (
+            topTracks.items.map((track, i) => <TrackItem track={track} key={i} />)
           ) : (
             <Loader />
           )}
         </div>
       </main>
-    );
+    )
   }
 }
 
-export default TopArtists;
+export default TopTracks;
