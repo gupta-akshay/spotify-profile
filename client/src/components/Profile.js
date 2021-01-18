@@ -6,6 +6,7 @@ import Nav from './Nav';
 import User from './User';
 import TopArtists from './TopArtists';
 import RecentlyPlayed from './RecentlyPlayed';
+import TopTracks from './TopTracks';
 
 
 import '../styles/profile.scss';
@@ -18,6 +19,7 @@ const Profile = () => (
         <User path="/" />
         <TopArtists path="artists" />
         <RecentlyPlayed path="recent" />
+        <TopTracks path="tracks" />
       </ScrollToTop>
     </Router>
   </div>
