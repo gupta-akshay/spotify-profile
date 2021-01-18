@@ -129,7 +129,7 @@
         margin: 0;
       }
     }
-    &__button {
+    &__more {
       display: inline-block;
       color: #FFFFFF;
       font-weight: 700;
@@ -141,12 +141,17 @@
       padding: 11px 24px;
       cursor: pointer;
       transition: all 0.25s cubic-bezier(0.3, 0, 0.4, 1);;
-
+      text-align: center;
+      white-space: nowrap;
       &:hover,
       &:focus {
         color: #181818;
         background: #FFFFFF;
         outline: 0;
+      }
+      @media (max-width: 30em) {
+        padding: 11px 20px;
+        font-size: 12px;
       }
     }
   }
