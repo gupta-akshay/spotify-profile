@@ -8,7 +8,8 @@ import TopArtists from './TopArtists';
 import RecentlyPlayed from './RecentlyPlayed';
 import TopTracks from './TopTracks';
 import Playlists from './Playlists';
-
+import Playlist from './Playlist';
+import Recommendations from './Recommendations';
 
 import '../styles/profile.scss';
 
@@ -22,6 +23,8 @@ const Profile = () => (
         <RecentlyPlayed path="recent" />
         <TopTracks path="tracks" />
         <Playlists path="playlists" />
+        <Playlist path="playlists/:playlistId" />
+        <Recommendations path="recommendations/:playlistId" />
       </ScrollToTop>
     </Router>
   </div>
