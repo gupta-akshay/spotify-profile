@@ -47,7 +47,7 @@
       padding: 11px 24px;
       margin: 20px 0;
       cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.3, 0, 0.4, 1);;
+      transition: all 0.25s cubic-bezier(0.3, 0, 0.4, 1);
 
       &:hover,
       &:focus {
@@ -58,6 +58,7 @@
     &__save {
       display: inline-block;
       color: #FFFFFF;
+      background-color: #181818;
       font-weight: 700;
       font-size: 12px;
       letter-spacing: 1px;
@@ -67,7 +68,7 @@
       padding: 11px 24px;
       margin: 20px 0;
       cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.3, 0, 0.4, 1);;
+      transition: all 0.25s cubic-bezier(0.3, 0, 0.4, 1);
 
       &:hover,
       &:focus {
