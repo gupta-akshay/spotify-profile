@@ -11,6 +11,7 @@ import Playlists from './Playlists';
 import Playlist from './Playlist';
 import Recommendations from './Recommendations';
 import Artist from './Artist';
+import Track from './Track';
 
 import '../styles/profile.scss';
 
@@ -27,6 +28,7 @@ const Profile = () => (
         <Playlist path="playlists/:playlistId" />
         <Recommendations path="recommendations/:playlistId" />
         <Artist path="artist/:artistId" />
+        <Track path="track/:trackId" />
       </ScrollToTop>
     </Router>
   </div>

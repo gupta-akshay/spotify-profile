@@ -1,0 +1,141 @@
+.track-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  min-height: 100vh;
+  padding: 80px;
+  @media (max-width: 75em) {
+    padding: 60px 50px;
+  }
+  @media (max-width: 48em) {
+    padding: 50px 40px;
+  }
+  @media (max-width: 30em) {
+    padding: 30px 25px;
+  }
+  h2 {
+    @media (max-width: 48em) {
+      text-align: center;
+    }
+  }
+
+  .track {
+    display: flex;
+    margin-bottom: 70px;
+    @media (max-width: 30em) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    &__artwork {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      max-width: 250px;
+      margin-right: 40px;
+      @media (max-width: 48em) {
+        max-width: 200px;
+      }
+      @media (max-width: 30em) {
+        margin: 0 auto;
+      }
+    }
+    &__info {
+      flex-grow: 1;
+      @media (max-width: 30em) {
+        text-align: center;
+        margin-top: 30px;
+      }
+      &-name {
+        font-size: 42px;
+        margin: 0 0 5px;
+        @media (max-width: 30em) {
+          font-size: 30px;
+        }
+      }
+      &-artists {
+        color: #b3b3b3;
+        font-weight: 700;
+        text-align: left !important;
+        @media (max-width: 48em) {
+          font-size: 20px;
+        }
+        @media (max-width: 30em) {
+          text-align: center !important;
+        }
+      }
+      &-album {
+        color: #9B9B9B;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      &-play {
+        display: inline-block;
+        background-color: #1DB954;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        padding: 11px 24px;
+        margin: 20px 0;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.3, 0, 0.4, 1);
+
+        &:hover,
+        &:focus {
+          background-color: #1ed760;
+          outline: 0;
+        }
+      }
+    }
+  }
+
+  .audio-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .features {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(100px, 1fr));
+      width: 100%;
+      margin-bottom: 50px;
+      text-align: center;
+      @media (max-width: 37.5em) {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+      }
+      @media (max-width: 30em) {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+
+      .feature {
+        padding: 15px 10px;
+        border: 1px solid #404040;
+        &-text {
+          color: #b3b3b3;
+          font-size: 30px;
+          font-weight: 700;
+          margin-bottom: 0;
+          @media (max-width: 48em) {
+            font-size: 24px;
+          }
+        }
+        &-label {
+          color: #b3b3b3;
+          font-size: 12px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .desc-link {
+      color: #b3b3b3;
+      margin: 20px auto 0;
+      border-bottom: 1px solid transparent;
+      &:hover,
+      &:focus {
+        color: #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+      }
+    }
+  }
+}
